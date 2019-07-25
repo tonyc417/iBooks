@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
+import Display from './components/Display';
 import './App.css';
 
 function App() {
 
   const API_KEY = '';
 
-  const [query, setQuery] = useState(null);
+  const [query, setQuery] = useState('quiliting');
 
   useEffect(() => {
     goBooks();
@@ -15,7 +16,8 @@ function App() {
   const goBooks = async () => {
     const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=diary_of_a_wimpy_kid&key=${API_KEY}`);
     const data = await response.json();
-    console.log(data);
+    // setQuery(data.items);
+    console.log(data.items[0].volumeInfo);
   }
 
   return (
@@ -30,6 +32,7 @@ function App() {
                 </form>
             </div>
         </div>
+      <Display />
     </div>
   );
 }
