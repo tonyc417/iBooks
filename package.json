@@ -12,7 +12,7 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && yarn run build",
-    "build": "cd client && npm run build",
+    "build": "cd client && yarn run build",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "author": "",
