@@ -1,0 +1,24 @@
+{
+  "name": "ibooks",
+  "version": "1.0.0",
+  "description": "Search for your favorite books!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyc417/iBooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonyc417/iBooks/issues"
+  },
+  "homepage": "https://github.com/tonyc417/iBooks#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
